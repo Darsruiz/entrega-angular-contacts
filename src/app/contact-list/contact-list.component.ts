@@ -20,7 +20,7 @@ export class ContactListComponent implements OnInit {
     name: "juan",
     email: "@",
     phoneNumber: "String",
-    image: "String",
+    image: "http://svgur.com/i/7aS.svg",
 }
 
   constructor() { }
@@ -30,19 +30,29 @@ export class ContactListComponent implements OnInit {
   }
 
   addContact(){
-    if (this.newContact.name != "") {
-      contactList.push(this.newContact)
+    if (this.newContact.image == "")
+    {this.newContact.image = "http://svgur.com/i/7aS.svg"}
+
+
+    {
+    let tempContact = {...this.newContact}
+      contactList.push(tempContact)
       // add contact to contacts list
-      // clear inputs
 
-      this.newContact.name = ""
-      this.newContact.email = ""
-      this.newContact.phoneNumber = ""
-      this.newContact.image = ""
-    } else {
-      alert("please input stuff")
-    }
+      console.log('contactList',contactList);
 
+      this.clearInputs()
+  }
+  }
+  delContact(contact) {
+    this.contacts = this.contacts.filter(c => c != contact)
   }
 
+  // clear inputs
+  clearInputs() {
+    this.newContact.name = ""
+    this.newContact.email = ""
+    this.newContact.phoneNumber = ""
+    this.newContact.image = ""
+  }
 }
