@@ -11,11 +11,17 @@ interface Contact {
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.css']
+  styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
   contacts: Object[];
-  newContact: Contact;
+
+  newContact: Contact = {
+    name: "juan",
+    email: "@",
+    phoneNumber: "String",
+    image: "String",
+}
 
   constructor() { }
 
@@ -24,7 +30,19 @@ export class ContactListComponent implements OnInit {
   }
 
   addContact(){
-    // add contact to contacts list
-    // clear inputs
+    if (this.newContact.name != "") {
+      contactList.push(this.newContact)
+      // add contact to contacts list
+      // clear inputs
+
+      this.newContact.name = ""
+      this.newContact.email = ""
+      this.newContact.phoneNumber = ""
+      this.newContact.image = ""
+    } else {
+      alert("please input stuff")
+    }
+
   }
+
 }
