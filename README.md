@@ -1,6 +1,6 @@
 # Singulars Contacts
 
-## Introducción
+## Introducción.
 
 Aquí en SingularsLab, hemos descubierto que a los estudiantes les gusta tener una forma de llevar un registro de los contactos que hacen durante su experiencia en Singulars, para futuros proyectos, y para recordar viejos tiempos.
 
