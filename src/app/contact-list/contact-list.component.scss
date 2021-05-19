@@ -2,11 +2,11 @@ img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 5px solid rgb(211, 211, 211);
+  border: 5px solid #a0a0a0;
 }
 
 .col {
-  background-color: rgb(129, 69, 184);
+  background-color: #CBC3E3;
   border-radius: 5px;
   margin: 5px 5px;
 }
@@ -18,6 +18,21 @@ ul {
   list-style-type: none;
   li:first-of-type {
     padding-top: 5px;
-    font-weight: 700;
+    padding-bottom: 5px;
   }
+}
+
+.delete-contact {
+  display: block;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: inherit;
+  margin-left: 90%;
+}
+
+
+.col { transition: all .2s ease-in-out; }
+.col:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #616161;
 }

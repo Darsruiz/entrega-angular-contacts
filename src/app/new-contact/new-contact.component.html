@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <label class="form-label" for="contact-name"></label>
+    <input class="form-control" type="text" placeholder="Name" [(ngModel)]="newContact.name">
+  </div>
+  <div>
+    <label class="form-label" for="contact-email"></label>
+    <input class="form-control" placeholder="Email" type="text" [(ngModel)]="newContact.email">
+  </div>
+  <div>
+    <label class="form-label" for="contact-phone"></label>
+    <input class="form-control" placeholder="Phone Number" type="text" [(ngModel)]="newContact.phoneNumber">
+  </div>
+  <div>
+    <label class="form-label" for="contact-image"></label>
+    <input class="form-control" placeholder="Image link" type="url" [(ngModel)]="newContact.image">
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" (click)="addContact()">Submit New Contact</button>
+  </div>
+
+
+</div>
