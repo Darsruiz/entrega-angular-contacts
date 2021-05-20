@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="display-2">Favorites</h2>
+  <div class="row">
+    <div class="col" *ngFor="let favorite of favorites">
+      <ul>
+        <img [src]="favorite.image" alt="" />
+        <li class="display-6">{{ favorite.name }}</li>
+        <li>{{ favorite.phoneNumber }}</li>
+        <li>{{ favorite.email }}</li> 
+      </ul>
+    </div>
+  </div>
+</div>

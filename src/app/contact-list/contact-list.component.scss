@@ -9,6 +9,17 @@ img {
   background-color: #CBC3E3;
   border-radius: 5px;
   margin: 5px 5px;
+  transition: all .2s ease-in-out;
+  box-shadow: 0 0 7px #e2c4ce;
+
+  /* #FFE6EE */
+}
+
+.col:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #af8090;
+
+  /* #616161 */
 }
 
 ul {
@@ -30,9 +41,24 @@ ul {
   margin-left: 90%;
 }
 
+.add-new {
+  background: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: black;
+  line-height: 4rem;
+}
 
-.col { transition: all .2s ease-in-out; }
-.col:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px #616161;
+.new-contact-col {
+  background-color: #29b6f6;
+}
+
+.contact-component {
+  width: 100%;
+  height: 100%;
+}
+
+col {
+  min-width: 200px;
 }

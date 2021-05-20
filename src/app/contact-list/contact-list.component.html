@@ -9,7 +9,12 @@
         <li>{{contact.email}}</li>
       </ul>
     </div>
+    <div *ngIf="!showVar" class="col new-contact-col">
+      <button class="display-1 add-new" (click)="toggleChild()">+</button>
+    </div>
+    <div *ngIf="showVar" class="col new-contact-col">
+      <app-new-contact class="contact-component" (newItemEvent)="toggleChild()" [showMePartially]="showVar"></app-new-contact>
+    </div>
   </div>
 </div>
 
-<app-new-contact></app-new-contact>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { VariablesService } from '../variables.service';
 
@@ -17,8 +17,10 @@ interface Contact {
 export class NewContactComponent implements OnInit {
   /* contacts: Object[];
  */
+  @Input() showMePartially: boolean;
 
-
+  @Output() newItemEvent = new EventEmitter<string>();
+  
   newContact: Contact = {
     name: "",
     email: "",
@@ -46,6 +48,8 @@ export class NewContactComponent implements OnInit {
       console.log('contacts',this.data.contacts);
 
       this.clearInputs()
+      // mostrar boton
+      this.newItemEvent.emit();
     }
 
     // clear inputs

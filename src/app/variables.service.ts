@@ -6,6 +6,7 @@ import contacts from './contacts';
 })
 export class VariablesService {
 
+  favorites 
   contacts = contacts;
 
   constructor() { }

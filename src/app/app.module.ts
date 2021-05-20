@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { NewContactComponent } from './new-contact/new-contact.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
-    NewContactComponent
+    NewContactComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
